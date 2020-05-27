@@ -6,8 +6,7 @@ const replaceChar = (origString, newChar, index) => {
     let firstPart = origString.substr(0, index);
     let lastPart = origString.substr(index + 1);
       
-    let newString = firstPart + newChar + lastPart;
-    return newString;
+    return firstPart + newChar + lastPart;
 }
 // now the camel function proper consist of two while loops utilising indexOf method
 // a while loop will continue to run as long as conditions in brckets checks as true
