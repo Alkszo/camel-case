@@ -15,11 +15,11 @@ const replaceChar = (origString, newChar, index) => {
 // it also returns -1 when the string does not contain given character, 
 // so it's a handy method for checking if undesired characters ('_' and ' ' in this case) are eliminated
 const toCamelCase = (str) => {
-    while (str.indexOf('_') !== -1) { //this will run untill there are '_' in the string
-        let index = str.indexOf('_') + 1; //this identifies the index of character following first underscore in the string
+    while (str.indexOf('-') !== -1) { //this will run untill there are '_' in the string
+        let index = str.indexOf('-') + 1; //this identifies the index of character following first underscore in the string
         let upper = str[index].toUpperCase(); //this takes said character to upper case
         str = replaceChar(str, upper, index); //this uses previously written function to replace a character after underscore with it's uppercase version
-        str = str.replace('_', '-'); //this replaces first underscore in the string with dash; while loop will go over the string again and execute if there are any '_' left
+        str = str.replace('-', '_'); //this replaces first underscore in the string with dash; while loop will go over the string again and execute if there are any '_' left
     }
     while (str.indexOf(' ') !== -1) { //a similar loop for spaces
         let index = str.indexOf(' ') + 1; //identify character after space
