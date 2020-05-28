@@ -30,7 +30,7 @@ const toCamelCase = (str) => {
     // and for the final touch I make sure the first character is in lower case
     return str.charAt(0).toLowerCase() + str.substr(1);
 }
-console.log(toCamelCase('I want to_be a_camel'))
+console.log(toCamelCase('I want to-be-a-camel'))
 console.log(toCamelCase('Camelise me'))
-console.log(toCamelCase('Camels_camels everywhere'))
+console.log(toCamelCase('Camels-camels everywhere'))
 console.log(toCamelCase('Do you fancy living in a desert?'))
